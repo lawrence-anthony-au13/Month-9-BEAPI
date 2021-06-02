@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 5000;
 var fs = require("fs");
 var data = fs.readFileSync("chemistry.json");
 var elements = JSON.parse(data);
@@ -5,7 +6,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-app.listen(5000, () => console.log("Server Start at 5000 Port"));
+app.listen(PORT, () => console.log(`Server Start at ${PORT}`));
 
 app.use(express.static("public"));
 app.use(cors());

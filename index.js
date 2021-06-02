@@ -18,7 +18,6 @@ function searchElement(request, response) {
   var word = request.params.element;
   word = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   console.log(word);
-  //console.log(elements[word]);
   if (elements[word]) {
     var reply = elements[word];
   } else {
